@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watori`s Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-yellow-50">
+    <header class="bg-cyan-50 text-4xl py-8 flex justify-center bg-[url('img/ヘッダー画像1.jpg')] text-white">
+        Watori`s Portfolio
+    </header>
+    <main class="flex-grow w-screen max-w-4xl mx-auto my-8 px-2">
+        <h1 class="text-3xl border-b-4 border-gray-300 mb-6">About</h1>
+        <p class="text-gray-700 leading-loose">このサイトは、豺大ｾｳ荳ｭ蟄ｦ鬮倡ｭ牙ｭｦ譬｡の授業内で作成したサイトです。</p>
+
+        <h2 class="text-2xl border-l-8 border-gray-300 pl-3 mt-10 mb-4">Detail</h2>
+        <p class="text-gray-700 leading-loose">
+            私がこれまでに作った「作品(笑)」達です。
+            <br>どうか生あたたたたたかい目で見守って下さい。
+        </p>
+        <h2 class="text-2xl border-l-8 border-gray-300 pl-3 mt-10 mb-4">My Pages</h2>
+        <div class="flex flex-wrap justify-between">
+            <a href="index4.html" class="mt-8 w-full sm:w-[30%] shadow hover:shadow-lg transition">
+                <div class="aspect-video overflow-hidden rounded">
+                    <img class="w-full h-full object-cover" src="img/ボブ.png" alt="ヤーミンナ折田">
+                </div>
+                <div class="m-4 font-bold">イラつく一問一答</div>
+            </a>
+            <a href="index5.html" class="mt-8 w-full sm:w-[30%] shadow hover:shadow-lg transition">
+                <div class="aspect-video overflow-hidden rounded">
+                    <img class="w-full h-full object-cover" src="img/keyboard.jpg" alt="壊れたキーボード">
+                </div>
+                <div class="m-4 font-bold">イラつくクイズ</div>
+            </a>
+            <a href="index6.html" class="mt-8 w-full sm:w-[30%] shadow hover:shadow-lg transition">
+                <div class="aspect-video overflow-hidden rounded">
+                    <img class="w-full h-full object-cover" src="img/keyboard.jpg.png" alt="壊れたキーボード">
+                </div>
+                <div class="m-4 font-bold">CTF</div>
+            </a>
+        </div>
+        <input type="text" id="password" placeholder="パスワードを入力">
+        <button onclick="goToPage()">送信</button>
+        
+        <script>
+          function goToPage() {
+            const pass = document.getElementById("password").value.trim();
+            if (pass) {
+              // 入力された値をURLに埋め込んで遷移
+              window.location.href = `https://okonomiyaki1234.github.io/${encodeURIComponent(pass)}/`;
+            }
+          }
+        </script>
+        <h2 class="text-2xl border-l-8 border-gray-300 pl-3 mt-10 mb-4">My Pages</h2>
+        <div class="flex flex-wrap justify-between">
+            <a href="index.html" class="mt-8 w-full sm:w-[30%] shadow hover:shadow-lg transition">
+                <div class="aspect-video overflow-hidden rounded">
+                    <img class="w-full h-full object-cover" src="img/home.jpg" alt="ホーム">
+                </div>
+                <div class="m-4 font-bold">ホーム</div>
+            </a>
+            <a href="index2.html" class="mt-8 w-full sm:w-[30%] shadow hover:shadow-lg transition">
+                <div class="aspect-video overflow-hidden rounded">
+                    <img class="w-full h-full object-cover" src="img/index2画像.png" alt="不気味">
+                </div>
+                <div class="m-4 font-bold">繧ゅ▲縺ｨ隕九ｋ？</div>
+            </a>
+        </div>
+    </main>
+    <footer class="bg-gray-700 text-white text-sm py-1 flex justify-center">
+        &copy Watori`s Portfolio
+    </footer>
+</body>
+</html>
